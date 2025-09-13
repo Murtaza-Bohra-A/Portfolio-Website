@@ -1,0 +1,63 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.col-8{
+    display: flex; /* Enables flexbox layout */
+       /* Adds space between the boxes */
+      justify-content: right; /* Aligns boxes to the left; change to 'center' or 'flex-end' if needed */
+      flex-wrap: wrap; 
+     
+  }
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+}
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #1e293b;
+    --accent: #ec4899;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --dark-gray: #334155;
+  }
+
+  :root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #1e293b;
+    --accent: #ec4899;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --dark-gray: #334155;
+}
+
+:root {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #1e293b;
+    --accent: #ec4899;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --dark-gray: #334155;
+  }
+  /* // work  */
+
+    :root {
+            --primary: #2962ff;
+            --primary-dark: #0039cb;
+            --dark: #0a192f;
+            --light: #e6f1ff;
+            --accent: #64ffda;
+            --gray: #8892b0;
+            --light-gray: #ccd6f6;
+        }
+  

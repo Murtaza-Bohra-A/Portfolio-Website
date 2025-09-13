@@ -1,0 +1,280 @@
+.education-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.education-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.education-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.header-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.decoration-line {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(to right, transparent, #3498db, transparent);
+}
+
+.decoration-icon {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #3498db, #9b59b6);
+  border-radius: 3px;
+}
+
+.degree {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.degree:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.degree-badge {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px #fff, 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.badge-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.badge-year {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-top: 2px;
+}
+
+.degree-content {
+  margin-left: 1rem;
+}
+
+.degree h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 0.3rem;
+}
+
+.duration {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.specialization {
+  background: #f8f9fa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1rem;
+  border-left: 3px solid #3498db;
+}
+
+.degree-description {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.education-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+      padding-left: 30px;
+  }
+  
+  .degree-badge {
+      left: -30px;
+      width: 30px;
+      height: 30px;
+  }
+  
+  .badge-icon {
+      font-size: 0.8rem;
+  }
+  
+  .badge-year {
+      font-size: 0.5rem;
+  }
+}
+
+
+
+/* Scroll down animation */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #3498db;
+  border-bottom: 2px solid #3498db;
+  transform: rotate(45deg);
+  margin: -6px;
+  opacity: 0;
+  animation: arrow-wave 1.5s infinite;
+}
+
+.scroll-down-arrow:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.scroll-down-arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.scroll-down-arrow:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes arrow-wave {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-10px, -10px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(10px, 10px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+  }
+  40% {
+      transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+      transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* scroll code  */
+
+/* Smooth scrolling */
+  /* Scrollable section container */
+  .scroll-section {
+    height: 100vh;           /* Full viewport height */
+    overflow-y: auto;        /* Enable vertical scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 20px;
+    background: #f5f7fa;
+    
+    /* Hide standard scrollbar for cleaner look (optional) */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide scrollbar for Chrome/Safari */
+  .scroll-section::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Content styling - just for demo */
+  .content-block {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Scroll indicator (optional) */
+  .scroll-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+  }
