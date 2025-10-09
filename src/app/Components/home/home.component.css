@@ -505,12 +505,14 @@ i{
     transform: translateY(-10px);
   }
 }
-.hero-image{
-  width: 100%;
+.hero-image {
+  width: auto;
   height: auto;
- 
+  max-width: 100%;
 }
-img{
+
+img:not(.hero-image) {
   height: 100px;
   width: 100px;
 }
+
