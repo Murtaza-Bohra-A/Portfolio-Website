@@ -38,25 +38,51 @@
             <a href="https://maps.app.goo.gl/tUY5WxC5556WuTd36" target="_blank" class="card-link">View on Map</a>
         </div>
     </div>
-    
+    <p-toast></p-toast>
     <!-- Contact Form -->
     <div class="contact-form-container">
-        <h3 class="form-title">Send Me a Message</h3>
-        <form class="contact-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+      <h3 class="form-title">Send Me a Message</h3>
+      <form [formGroup]="contactForm" (ngSubmit)="submit($event)" class="contact-form">
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name" formControlName="name" />
+          <small *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+            Name is required
+          </small>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Your Email" formControlName="email" />
+          <small *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+            Valid email is required
+          </small>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Subject" formControlName="subject" />
+        </div>
+
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Your Message" formControlName="message"></textarea>
+          <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+            Message is required
+          </small>
+        </div>
+        <!-- From Uiverse.io by adamgiebl -->
+        <button class="cssbuttons-io" type="submit" >
+          <span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor"></path>
+            </svg>
+            Send Message
+          </span>
+        </button>
+
+        
+
+      </form>
     </div>
     
     <!-- Social Media -->
